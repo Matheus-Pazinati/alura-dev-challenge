@@ -8,9 +8,110 @@
   --color-blue300: #5081FB;
   --color-blue200: #7BA4FC;
   --color-blue100: #96B9FD;
+  --color-codeborder: #6BD1FF;
   --color-dark-grey: #141414;
   --color-green: #27C93F;
   --color-red: #FF5F56;
   --color-yellow: #FFBD2E;
   --color-white: #FEFEFE;
+}
+body {
+  background-color: var(--color-background);
+  padding: 0 1rem;
+}
+
+/* ============ CABEÇALHO ===== */
+.header {
+  padding: 1.75rem 0 3.125rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__search, .header__menu, .header__logo {
+  display: flex;
+  align-items: center;
+}
+.header__icons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.header__icons i {
+  font-size: 1.5rem;
+  color: var(--color-white);
+  font-weight: bold;
+  padding: 0.75rem;
+  cursor: pointer;
+}
+.header__icons .header__close {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* ============ EDITOR DE CÓDIGO ===== */
+.code__editor {
+  background-color: #000;
+  height: calc(100vh - 94px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+.editor__container {
+  width: 100%;
+  height: 100%;
+  border: 2rem solid var(--color-codeborder);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.editor__container textarea {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  resize: none;
+  color: var(--color-white);
+  border: none;
+  font: var(--font-code);
+  border-radius: 0.5rem;
+}
+.editor__container textarea:focus-visible {
+  outline: none;
+}
+.editor__content {
+  width: 100%;
+  height: 100%;
+  border: 1rem solid black;
+  box-sizing: content-box;
+}
+.editor__icons {
+  display: flex;
+  gap: .5rem;
+  margin-bottom: 1.5rem;
+}
+.editor__icon {
+  width: 0.75rem;
+  height: 0.75rem;
+  clip-path: circle();
+}
+.editor__icon.icon-red {
+  background-color: var(--color-red);
+}
+.editor__icon.icon-yellow {
+  background-color: var(--color-yellow);
+}
+.editor__icon.icon-green {
+  background-color: var(--color-green);
+}
+.button__highlight {
+  width: 100%;
+  text-align: center;
+  font: var(--font-body);
+  margin-top: 2rem;
+  padding: 0.9rem 0;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: rgba(80, 129, 251, 0.08);
+  color: var(--color-white);
 }
