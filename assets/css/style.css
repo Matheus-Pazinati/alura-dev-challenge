@@ -25,6 +25,16 @@ body {
   letter-spacing: 0.4em;
   text-transform: uppercase;
 }
+.sr-only {
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  clip-path: inset(50%);
+  left: -10000px;
+}
 
 /* ============ CABEÇALHO ===== */
 .header {
@@ -32,6 +42,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.header__logo {
+  padding: 0.65rem 0;
 }
 .header__search, .header__menu, .header__logo {
   display: flex;
@@ -42,14 +55,31 @@ body {
   align-items: center;
   gap: 0.5rem;
 }
-.header__icons i {
+.header i {
   font-size: 1.5rem;
   color: var(--color-white);
   font-weight: bold;
   padding: 0.75rem;
   cursor: pointer;
+  border-radius: 1rem;
 }
-.header__icons .header__close {
+.header i:hover {
+  background: rgba(80, 129, 251, 0.08);
+}
+.header i:active {
+  background: rgba(80, 129, 251, 0.16);
+}
+.header__icons .header__close, .header.active .header__menu {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+.header.active .header__close {
+  display: initial;
+  opacity: 1;
+  visibility: visible;
+}
+.header.search .header__logo, .header.search .header__icons {
   display: none;
   opacity: 0;
   visibility: hidden;
@@ -131,6 +161,12 @@ body {
   border-radius: 0.5rem;
   cursor: pointer;
 }
+.project input:hover, .project textarea:hover {
+  background-color: rgba(255, 255, 255, 0.24);
+}
+.project input:focus, .project textarea:focus {
+  background-color: rgba(255, 255, 255, 0.24);
+}
 
 /* ============ PERSONALIZAÇÃO ===== */
 .personalization input, .personalization select {
@@ -143,10 +179,16 @@ body {
 }
 .personalization__language {
   padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.16);
+  background-color: #2D415B;
 }
 .personalization__language:focus-visible {
   outline: none;
+}
+.personalization__language:hover {
+  background-color: rgba(255, 255, 255, 0.24);
+}
+.personalization__language option {
+  background: var(--color-background);
 }
 .personalization__color {
   height: 3.5rem;
@@ -170,6 +212,10 @@ input[type="color"]::-webkit-color-swatch {
   background-color: var(--color-blue300);
   color: var(--color-background);
   font: var(--font-body);
+  font-weight: bold;
+}
+.button__save:hover {
+  background-color: var(--color-blue200);
 }
 
 /* ============ MENU LATERAL ===== */
@@ -228,4 +274,28 @@ input[type="color"]::-webkit-color-swatch {
   height: 2rem;
   clip-path: circle();
   object-fit: cover;
+}
+
+/* ============ CAMPO BUSCA ===== */
+.search__container {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+.header.search .search__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 0.5rem;
+  opacity: 1;
+  visibility: visible;
+}
+.search__field {
+  padding: 1rem;
+  width: 100%;
+  background-color: #2D415B;
+  color: var(--color-white);
+  font: var(--font-body);
+  border-radius: 0.5rem;
 }

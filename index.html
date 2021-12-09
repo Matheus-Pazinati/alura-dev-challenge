@@ -12,24 +12,31 @@
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-  <header class="header">
+  <header class="header" id="header">
+    <div class="search__container">
+      <label for="search" class="sr-only">Pesquisar</label>
+      <input type="text" id="search" name="search" placeholder="Busque por algo" class="search__field">
+      <div class="search__close search__toggle">
+        <i class="icon-close"></i>
+      </div>
+    </div>
     <h1 class="header__logo">
       <img src="./assets/images/logo.svg" alt="Logo da AluraDev">
     </h1>
     <section class="header__icons">
-      <div class="header__search">
+      <div class="header__search search__toggle">
         <i class="icon-search"></i>
       </div>
-      <div class="header__menu toggle">
+      <div class="header__menu menu__toggle">
         <i class="icon-menu"></i>
       </div>
-      <div class="header__close toggle">
+      <div class="header__close menu__toggle">
         <i class="icon-close"></i>
       </div>
     </section>
     <nav class="side__menu">
       <div class="menu__items">
-        <a href="#" class="menu__item">
+        <a href="#header" class="menu__item">
           <img src="./assets/images/icon-editor.svg" alt="Ícone da página Editor de código">
           <span>Editor de código</span>
         </a>
@@ -53,24 +60,32 @@
           <div class="editor__icon icon-yellow"></div>
           <div class="editor__icon icon-green"></div>
         </div>
+        <label for="code" class="sr-only">Editor de código</label>
         <textarea name="code" id="code"></textarea>
       </div>
     </section>
     <button class="button__highlight">Visualizar com o highlight</button>
-    <section class="project">
-      <h2 class="input__title">Seu projeto</h2>
-      <input type="text" id="name" name="name" placeholder="Nome do seu projeto" class="project__name">
-      <textarea type="text" id="description" name="description" placeholder="Descrição do seu projeto" rows="2" class="project__description"></textarea>
-    </section>
-    <section class="personalization">
-      <h2 class="input__title">Personalização</h2>
-      <select name="language" id="language" class="personalization__language">
-        <option value=""></option>
-        <option value="JavaScript">JavaScript</option>
-      </select>
-      <input type="color" id="color" name="color" class="personalization__color" value="#6BD1FF">
-    </section>
+    <form>
+      <fieldset class="project">
+        <h2 class="input__title">Seu projeto</h2>
+        <label for="name" class="sr-only">Nome do seu projeto</label>
+        <input type="text" id="name" name="name" placeholder="Nome do seu projeto" class="project__name">
+        <label for="description" class="sr-only">Descrição do seu projeto</label>
+        <textarea type="text" id="description" name="description" placeholder="Descrição do seu projeto" rows="2" class="project__description"></textarea>
+      </fieldset>
+      <fieldset class="personalization">
+        <legend class="input__title">Personalização</legend>
+        <label for="language" class="sr-only">Seleciona uma linguagem de programação</label>
+        <select name="language" id="language" class="personalization__language">
+          <option value="Javascript" selected>Javascript</option>
+          <option value="Python">Python</option>
+        </select>
+        <label for="color" class="sr-only">Selecione uma cor para seu projeto</label>
+        <input type="color" id="color" name="color" class="personalization__color" value="#6BD1FF">
+      </fieldset>
+    </form>
     <button type="submit" class="button__save">Salvar projeto</button>
   </main>
+  <script src="./main.js"></script>
 </body>
 </html>
