@@ -14,7 +14,7 @@
 <body>
   <header class="header">
     <h1 class="header__logo">
-      <img src="./assets/images/Logo.svg" alt="Logo da AluraDev">
+      <img src="./assets/images/logo.svg" alt="Logo da AluraDev">
     </h1>
     <section class="header__icons">
       <div class="header__search">
@@ -27,6 +27,23 @@
         <i class="icon-close"></i>
       </div>
     </section>
+    <nav class="side__menu">
+      <div class="menu__items">
+        <a href="#" class="menu__item">
+          <img src="./assets/images/icon-editor.svg" alt="Ícone da página Editor de código">
+          <span>Editor de código</span>
+        </a>
+        <a href="#" class="menu__item">
+          <img src="./assets/images/icon-community.svg" alt="Ícone da página Comunidade">
+          <span>Comunidade</span>
+        </a>
+      </div>
+      <div class="divider"></div>
+      <div class="menu__profile">
+        <img src="./assets/images/marcos-jeeves.jpg" alt="Foto do usuário Marcos">
+        <span>Marcos Jeeves</span>
+      </div>
+    </nav>
   </header>
   <main>
     <section class="code__editor">
@@ -40,6 +57,20 @@
       </div>
     </section>
     <button class="button__highlight">Visualizar com o highlight</button>
+    <section class="project">
+      <h2 class="input__title">Seu projeto</h2>
+      <input type="text" id="name" name="name" placeholder="Nome do seu projeto" class="project__name">
+      <textarea type="text" id="description" name="description" placeholder="Descrição do seu projeto" rows="2" class="project__description"></textarea>
+    </section>
+    <section class="personalization">
+      <h2 class="input__title">Personalização</h2>
+      <select name="language" id="language" class="personalization__language">
+        <option value=""></option>
+        <option value="JavaScript">JavaScript</option>
+      </select>
+      <input type="color" id="color" name="color" class="personalization__color" value="#6BD1FF">
+    </section>
+    <button type="submit" class="button__save">Salvar projeto</button>
   </main>
 </body>
 </html>

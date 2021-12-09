@@ -4,4 +4,11 @@
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
+  border: none;
+}
+textarea {
+  resize: none;
+}
+textarea:focus-visible, input:focus-visible {
+  outline: none;
 }
