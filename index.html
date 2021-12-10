@@ -81,7 +81,15 @@
           <option value="Python">Python</option>
         </select>
         <label for="color" class="sr-only">Selecione uma cor para seu projeto</label>
-        <input type="color" id="color" name="color" class="personalization__color" value="#6BD1FF">
+        <input type="color" id="color" name="color" list="colors" class="personalization__color" value="#0597F2">
+        <datalist id="colors">
+          <option value="#0597F2"></option>
+          <option value="#970FF2"></option>
+          <option value="#49D907"></option>
+          <option value="#EAF205"></option>
+          <option value="#F24607"></option>
+          <option value="#D91111"></option>
+        </datalist>
       </fieldset>
     </form>
     <button type="submit" class="button__save">Salvar projeto</button>

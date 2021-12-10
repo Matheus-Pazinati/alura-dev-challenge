@@ -10,13 +10,13 @@ menuLinkHome.addEventListener('click', () => {
   header.classList.remove('active')
 })
 
-function openCloseMenu (icon) {
+function openCloseMenu(icon) {
   icon.addEventListener('click', () => {
     header.classList.toggle('active')
   })
 }
 
-function openCloseSearchField (icon) {
+function openCloseSearchField(icon) {
   icon.addEventListener('click', () => {
     const menuOpen = header.classList.contains('active')
     if (menuOpen) {
@@ -24,6 +24,16 @@ function openCloseSearchField (icon) {
     }
     header.classList.toggle('search')
   })
+}
+changeBorderColor()
+const selectColor = document.querySelector('.personalization__color')
+selectColor.addEventListener('change', changeBorderColor)
+
+function changeBorderColor() {
+  const editorBorder = document.querySelector('.editor__container')
+  const selectedColor = color.value 
+  editorBorder.style.borderImage = `linear-gradient(180deg, ${selectedColor}BF, ${selectedColor}, ${selectedColor}, ${selectedColor}BF) 1%`
+  
 }
 
 
