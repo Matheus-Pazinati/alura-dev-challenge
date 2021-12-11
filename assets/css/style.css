@@ -178,6 +178,9 @@ body {
   cursor: pointer;
   border-radius: 0.5rem;
 }
+.personalization input {
+  appearance: none;
+}
 .personalization__language {
   padding: 1rem;
   background-color: #2D415B;
@@ -194,8 +197,7 @@ body {
 .personalization__color {
   height: 3.5rem;
   border: 1px solid #FFF;
-  background-color: transparent;
-  padding: 0 0.15rem;
+  padding: 0.5rem;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 input[type="color"]::-webkit-color-swatch {
@@ -299,4 +301,28 @@ input[type="color"]::-webkit-color-swatch {
   color: var(--color-white);
   font: var(--font-body);
   border-radius: 0.5rem;
+}
+
+/* ============ RESPONSIVIDADE ===== */
+@media (min-width: 600px) {
+  body {
+    padding: 0 2rem;
+  }
+  .search__container {
+    display: initial;
+    opacity: 1;
+    visibility: visible;
+    width: 100%;
+    padding: 0 5.5%;
+  }
+  .search__close, .header__search {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .personalization {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
 }

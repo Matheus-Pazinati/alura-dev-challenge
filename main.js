@@ -32,8 +32,8 @@ selectColor.addEventListener('change', changeBorderColor)
 function changeBorderColor() {
   const editorBorder = document.querySelector('.editor__container')
   const selectedColor = color.value 
-  editorBorder.style.borderImage = `linear-gradient(180deg, ${selectedColor}BF, ${selectedColor}, ${selectedColor}, ${selectedColor}BF) 1%`
-  
+  editorBorder.style.borderColor = selectedColor;
+  color.style.backgroundColor = selectedColor;
 }
 
 
