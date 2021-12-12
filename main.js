@@ -33,7 +33,4 @@ function changeBorderColor() {
   const editorBorder = document.querySelector('.editor__container')
   const selectedColor = color.value 
   editorBorder.style.borderColor = selectedColor;
-  color.style.backgroundColor = selectedColor;
 }
-
-

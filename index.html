@@ -13,29 +13,36 @@
 </head>
 <body>
   <header class="header" id="header">
-    <h1 class="header__logo">
-      <img src="./assets/images/logo.svg" alt="Logo da AluraDev">
-    </h1>
-    <div class="search__container">
-      <label for="search" class="sr-only">Pesquisar</label>
-      <input type="text" id="search" name="search" placeholder="Busque por algo" class="search__field">
-      <div class="search__close search__toggle">
-        <i class="icon-close"></i>
+    <div class="header__menu">
+      <h1 class="header__logo">
+        <img src="./assets/images/logo.svg" alt="Logo da AluraDev">
+      </h1>
+      <div class="search__container">
+        <label for="search" class="sr-only">Pesquisar</label>
+        <input type="text" id="search" name="search" placeholder="Busque por algo" class="search__field">
+        <div class="search__close search__toggle">
+          <i class="icon-close"></i>
+        </div>
+      </div>
+      <section class="header__icons">
+        <div class="header__search search__toggle">
+          <i class="icon-search"></i>
+        </div>
+        <div class="header__menu--icon menu__toggle">
+          <i class="icon-menu"></i>
+        </div>
+        <div class="header__close menu__toggle">
+          <i class="icon-close"></i>
+        </div>
+      </section>
+      <div class="menu__profile">
+        <img src="./assets/images/marcos-jeeves.jpg" alt="Foto do usuário Marcos">
+        <span>Marcos Jeeves</span>
       </div>
     </div>
-    <section class="header__icons">
-      <div class="header__search search__toggle">
-        <i class="icon-search"></i>
-      </div>
-      <div class="header__menu menu__toggle">
-        <i class="icon-menu"></i>
-      </div>
-      <div class="header__close menu__toggle">
-        <i class="icon-close"></i>
-      </div>
-    </section>
     <nav class="side__menu">
       <div class="menu__items">
+        <h2 class="input__title">Menu</h2>
         <a href="#header" class="menu__item">
           <img src="./assets/images/icon-editor.svg" alt="Ícone da página Editor de código">
           <span>Editor de código</span>
@@ -63,8 +70,8 @@
         <label for="code" class="sr-only">Editor de código</label>
         <textarea name="code" id="code"></textarea>
       </div>
+      <button class="button__highlight">Visualizar com o highlight</button>
     </section>
-    <button class="button__highlight">Visualizar com o highlight</button>
     <form>
       <fieldset class="project">
         <h2 class="input__title">Seu projeto</h2>
@@ -91,8 +98,8 @@
           <option value="#D91111"></option>
         </datalist>
       </fieldset>
+      <button type="submit" class="button__save">Salvar projeto</button>
     </form>
-    <button type="submit" class="button__save">Salvar projeto</button>
   </main>
   <script src="./main.js"></script>
 </body>
