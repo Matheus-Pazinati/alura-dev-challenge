@@ -362,7 +362,7 @@ input[type="color"]::-webkit-color-swatch {
   .search__container {
     grid-column: 2/2;
     grid-row: 1/1;
-    padding: 0 2.5rem 0 0;
+    padding: 0 2rem 0 0;
   }
   .side__menu {
     left: 2rem;
@@ -381,7 +381,7 @@ input[type="color"]::-webkit-color-swatch {
     grid-column: 2/4;
     display: grid;
     grid-template-columns: 2.3fr 1fr;
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: 2fr 1fr 1rem;
     gap: 2.5rem;
   }
   .code__editor {
