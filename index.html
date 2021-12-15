@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/highlight.css">
   <link rel="stylesheet" href="./assets/fonts/style.css">
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -68,7 +69,9 @@
           <div class="editor__icon icon-green"></div>
         </div>
         <label for="code" class="sr-only">Editor de código</label>
-        <textarea name="code" id="code"></textarea>
+        <div class="code__content">
+          <pre cols="10" rows="17"><code name="code" id="code" spellcheck="false" contenteditable="true" class="python hljs"></code></pre>
+        </div>
       </div>
       <button class="button__highlight">Visualizar com o highlight</button>
     </section>
@@ -84,8 +87,10 @@
         <legend class="input__title">Personalização</legend>
         <label for="language" class="sr-only">Seleciona uma linguagem de programação</label>
         <select name="language" id="language" class="personalization__language">
-          <option value="Javascript" selected>Javascript</option>
-          <option value="Python">Python</option>
+          <option value="javascript" selected>Javascript</option>
+          <option value="python">Python</option>
+          <option value="html">HTML</option>
+          <option value="python">CSS</option>
         </select>
         <label for="color" class="sr-only">Selecione uma cor para seu projeto</label>
         <input type="color" id="color" name="color" list="colors" class="personalization__color" value="#0597F2">
@@ -102,5 +107,8 @@
     </form>
   </main>
   <script src="./main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+  <script>hljs.highlightAll()</script>
+  <!-- <script src="./assets/scripts/highlight.js"></script> -->
 </body>
 </html>
