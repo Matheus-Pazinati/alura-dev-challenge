@@ -8,7 +8,6 @@
   --color-blue300: #5081FB;
   --color-blue200: #7BA4FC;
   --color-blue100: #96B9FD;
-  --color-codeborder: #6BD1FF;
   --color-dark-grey: #141414;
   --color-green: #27C93F;
   --color-red: #FF5F56;
@@ -34,6 +33,21 @@ body {
   white-space: nowrap;
   clip-path: inset(50%);
   left: -10000px;
+}
+.editor__container {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-blue300) transparent;
+}
+.editor__container::-webkit-scrollbar {
+  width: 12px;
+}
+.editor__container::-webkit-scrollbar-track {
+  background: transparent;
+}
+.editor__container::-webkit-scrollbar-thumb {
+  background-color: var(--color-dark-grey);
+  border-radius: 4px;
+  border: 3px solid var(--color-blue200);
 }
 
 /* ============ CABEÇALHO ===== */
@@ -93,6 +107,7 @@ body {
   align-items: center;
   flex-direction: column;
   border-radius: 0.5rem;
+  overflow: hidden;
 }
 .editor__container {
   width: 100%;
@@ -101,14 +116,17 @@ body {
   border-style: solid;
   border-radius: 0.5rem;
   background-color: #000;
+  overflow-y: auto;
 }
 .code__content {
   width: 100%;
   height: calc(100% - 52px);
-  white-space: pre-wrap;
+}
+.code__content--disabled {
+  pointer-events: none;
 }
 .editor__container pre {
-  height: 100%;
+  white-space: pre-wrap;
 }
 .editor__container code {
   height: 100%;
@@ -143,7 +161,7 @@ body {
 .editor__icon.icon-green {
   background-color: var(--color-green);
 }
-.button__highlight {
+.button__highlight, .button__highlight--remove {
   width: 100%;
   text-align: center;
   font: var(--font-body);
@@ -151,10 +169,15 @@ body {
   padding: 0.9rem 0;
   cursor: pointer;
   border-radius: 0.5rem;
-  background-color: rgba(80, 129, 251, 0.08);
   color: var(--color-white);
 }
-.button__highlight:hover {
+.button__highlight {
+  background-color: rgba(80, 129, 251, 0.08);
+}
+.button__highlight::after {
+  content: "Visualizar com o highlight";
+}
+.button__highlight:hover, .button__highlight--remove:hover {
   background: rgba(80, 129, 251, 0.16);
 }
 .button__highlight:active {
@@ -164,6 +187,20 @@ body {
 }
 .button__highlight:focus {
   background: rgba(80, 129, 251, 0.24);
+}
+.button__highlight--remove {
+  background-color: rgba(80, 129, 251, 0.24);
+}
+.button__highlight--remove:after {
+  content: "Remover o highlight";
+}
+.button__highlight--remove:active {
+  background-color:  rgba(80, 129, 251, 0.16);
+  padding: 0.7rem;
+  border: 0.2rem solid rgba(80, 129, 251, 0.08);
+}
+.button__highlight--remove:focus {
+  background: rgba(80, 129, 251, 0.40);
 }
 
 /* ============ SEU PROJETO ===== */
@@ -336,6 +373,10 @@ input[type="color"]::-webkit-color-swatch {
   border-radius: 0.5rem;
 }
 
+.teste {
+  content: "";
+}
+
 /* ============ RESPONSIVIDADE ===== */
 @media (min-width: 600px) {
   body {
@@ -409,7 +450,6 @@ input[type="color"]::-webkit-color-swatch {
     cursor: pointer;
   }
   main {
-    grid-row: 2/2;
     grid-column: 2/4;
     display: grid;
     grid-template-columns: 2.3fr 1fr;
@@ -419,7 +459,6 @@ input[type="color"]::-webkit-color-swatch {
   .code__editor {
     grid-column: 1/1;
     grid-row: 1/1;
-    height: auto;
   }
   main form {
     grid-column: 2/2;
