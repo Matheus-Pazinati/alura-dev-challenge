@@ -101,17 +101,17 @@ body {
 
 /* ============ EDITOR DE CÓDIGO ===== */
 .code__editor {
-  height: 75vh;
+  /* height: 65vh; */
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   border-radius: 0.5rem;
   overflow: hidden;
 }
 .editor__container {
+  height: 60vh;
   width: 100%;
-  height: 100%;
   border-width: 2rem;
   border-style: solid;
   border-radius: 0.5rem;
@@ -260,7 +260,7 @@ input[type="color"]::-webkit-color-swatch {
 
 /* ============ BOTÃO SALVAR ===== */
 .button__save {
-  margin: 2.5rem 0;
+  margin: 2rem 0 2.5rem 0;
   width: 100%;
   text-align: center;
   padding: 1rem 0;
@@ -373,10 +373,6 @@ input[type="color"]::-webkit-color-swatch {
   border-radius: 0.5rem;
 }
 
-.teste {
-  content: "";
-}
-
 /* ============ RESPONSIVIDADE ===== */
 @media (min-width: 600px) {
   body {
@@ -423,7 +419,7 @@ input[type="color"]::-webkit-color-swatch {
   .header__menu {
     display: grid;
     grid-template-columns: 1fr 2.3fr 1fr;
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: 1fr;
   }
   .header__logo {
     grid-column: 1/1;
@@ -437,7 +433,7 @@ input[type="color"]::-webkit-color-swatch {
   .side__menu {
     left: 2rem;
     background-color: transparent;
-    padding: 2.5rem 0;
+    padding: 2rem 0;
   }
   .header__menu .menu__profile {
     display: flex;
@@ -453,7 +449,7 @@ input[type="color"]::-webkit-color-swatch {
     grid-column: 2/4;
     display: grid;
     grid-template-columns: 2.3fr 1fr;
-    grid-template-rows: 2fr 1fr 1rem;
+    grid-template-rows: 1fr;
     gap: 2.5rem;
   }
   .code__editor {
@@ -462,13 +458,15 @@ input[type="color"]::-webkit-color-swatch {
   }
   main form {
     grid-column: 2/2;
-    grid-row: 1/3;
+    grid-row: 1/1;
+    max-height: 500px;
   }
   .project {
     padding: 0 0 2.5rem 0;
   }
   .personalization {
     flex-direction: column;
+    gap: 0;
   }
   .menu__profile {
     display: none;
