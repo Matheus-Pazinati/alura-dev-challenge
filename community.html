@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alura Dev Challenge - Community</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/fonts/style.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/community.css">
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="header__menu">
+      <h1 class="header__logo">
+        <img src="./assets/images/logo.svg" alt="Logo da AluraDev">
+      </h1>
+      <div class="search__container">
+        <label for="search" class="sr-only">Pesquisar</label>
+        <input type="text" id="search" name="search" placeholder="Busque por algo" class="search__field">
+        <div class="search__close search__toggle">
+          <i class="icon-close"></i>
+        </div>
+      </div>
+      <section class="header__icons">
+        <div class="header__search search__toggle">
+          <i class="icon-search"></i>
+        </div>
+        <div class="header__menu--icon menu__toggle">
+          <i class="icon-menu"></i>
+        </div>
+        <div class="header__close menu__toggle">
+          <i class="icon-close"></i>
+        </div>
+      </section>
+      <div class="menu__profile">
+        <img src="./assets/images/marcos-jeeves.jpg" alt="Foto do usuário Marcos">
+        <span>Marcos Jeeves</span>
+      </div>
+    </div>
+    <nav class="side__menu">
+      <div class="menu__items">
+        <h2 class="input__title">Menu</h2>
+        <a href="./index.html" class="menu__item">
+          <img src="./assets/images/icon-editor.svg" alt="Ícone da página Editor de código">
+          <span>Editor de código</span>
+        </a>
+        <a href="#" class="menu__item">
+          <img src="./assets/images/icon-community.svg" alt="Ícone da página Comunidade" class="active">
+          <span>Comunidade</span>
+        </a>
+      </div>
+      <div class="divider"></div>
+      <div class="menu__profile">
+        <img src="./assets/images/marcos-jeeves.jpg" alt="Foto do usuário Marcos">
+        <span>Marcos Jeeves</span>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <ul class="code__editor">
+
+    </ul>
+  </main>
+  <script src="./main.js"></script>
+</body>

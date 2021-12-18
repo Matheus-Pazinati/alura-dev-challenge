@@ -1,0 +1,159 @@
+/* EDITOR DE CÓDIGO */
+.editor__container {
+  border-width: 2rem;
+  border-style: solid;
+  border-radius: 0.5rem;
+  background-color: #000;
+  overflow-y: auto;
+}
+.button__highlight, .button__highlight--remove {
+  width: 100%;
+  text-align: center;
+  font: var(--font-body);
+  margin-top: 2rem;
+  padding: 0.9rem 0;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  color: var(--color-white);
+}
+.button__highlight {
+  background-color: rgba(80, 129, 251, 0.08);
+}
+.button__highlight::after {
+  content: "Visualizar com o highlight";
+}
+.button__highlight:hover, .button__highlight--remove:hover {
+  background: rgba(80, 129, 251, 0.16);
+}
+.button__highlight:active {
+  background-color:  rgba(80, 129, 251, 0.16);
+  padding: 0.7rem;
+  border: 0.2rem solid rgba(80, 129, 251, 0.24);
+}
+.button__highlight:focus {
+  background: rgba(80, 129, 251, 0.24);
+}
+.button__highlight--remove {
+  background-color: rgba(80, 129, 251, 0.24);
+}
+.button__highlight--remove:after {
+  content: "Remover o highlight";
+}
+.button__highlight--remove:active {
+  background-color:  rgba(80, 129, 251, 0.16);
+  padding: 0.7rem;
+  border: 0.2rem solid rgba(80, 129, 251, 0.08);
+}
+.button__highlight--remove:focus {
+  background: rgba(80, 129, 251, 0.40);
+}
+
+/* ============ SEU PROJETO ===== */
+.project {
+  padding: 2.5rem 0;
+}
+.project input, .project textarea {
+  width: 100%;
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: rgba(255, 255, 255, 0.16);
+  color: var(--color-white);
+  padding: 1rem;
+  font: var(--font-body);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.project input:hover, .project textarea:hover {
+  background-color: rgba(255, 255, 255, 0.24);
+}
+.project input:focus, .project textarea:focus {
+  background-color: rgba(255, 255, 255, 0.24);
+}
+
+/* ============ PERSONALIZAÇÃO ===== */
+.personalization input, .personalization select {
+  width: 100%;
+  margin-top: 1rem;
+  color: var(--color-white);
+  font: var(--font-body);
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+.personalization__language {
+  padding: 1rem;
+  background-color: #2D415B;
+}
+.personalization__language:focus-visible {
+  outline: none;
+}
+.personalization__language:hover {
+  background-color: rgba(255, 255, 255, 0.24);
+}
+.personalization__language option {
+  background: var(--color-background);
+}
+.personalization__color {
+  height: 3.5rem;
+  border: 1px solid #FFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: transparent;
+}
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 4px;
+}
+
+/* ============ BOTÃO SALVAR ===== */
+.button__save {
+  margin: 2rem 0 2.5rem 0;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  border-radius: 0.5rem;
+  background-color: var(--color-blue300);
+  color: var(--color-background);
+  font: var(--font-body);
+  font-weight: bold;
+  cursor: pointer;
+}
+.button__save:hover {
+  background-color: var(--color-blue200);
+}
+.button__save:active {
+  background-color: var(--color-blue200);
+  padding: 0.8rem;
+  border: 0.2rem solid var(--color-blue200);;
+}
+
+/* ============ RESPONSIVIDADE ===== */
+@media (min-width: 600px) {
+  .personalization {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+@media (min-width: 1025px) {
+  main {
+    display: grid;
+    grid-template-columns: 2.3fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 2.5rem;
+  }
+  .code__editor {
+    grid-column: 1/1;
+    grid-row: 1/1;
+  }
+  main form {
+    grid-column: 2/2;
+    grid-row: 1/1;
+    max-height: 500px;
+  }
+  .project {
+    padding: 0 0 2.5rem 0;
+  }
+  .personalization {
+    flex-direction: column;
+    gap: 0;
+  }
+}

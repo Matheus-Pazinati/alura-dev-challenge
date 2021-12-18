@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="./assets/css/highlight.css">
   <link rel="stylesheet" href="./assets/fonts/style.css">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/code-editor.css">
 </head>
 <body>
   <header class="header" id="header">
@@ -45,10 +46,10 @@
       <div class="menu__items">
         <h2 class="input__title">Menu</h2>
         <a href="#header" class="menu__item">
-          <img src="./assets/images/icon-editor.svg" alt="Ícone da página Editor de código">
+          <img src="./assets/images/icon-editor.svg" alt="Ícone da página Editor de código" class="active">
           <span>Editor de código</span>
         </a>
-        <a href="#" class="menu__item">
+        <a href="./community.html" class="menu__item">
           <img src="./assets/images/icon-community.svg" alt="Ícone da página Comunidade">
           <span>Comunidade</span>
         </a>
@@ -89,8 +90,9 @@
         <select name="language" id="language" class="personalization__language">
           <option value="javascript">Javascript</option>
           <option value="python">Python</option>
+          <option value="php">PHP</option>
           <option value="html">HTML</option>
-          <option value="css">CSS</option>
+          <option value="css">CSS</option>     
         </select>
         <label for="color" class="sr-only">Selecione uma cor para seu projeto</label>
         <input type="color" id="color" name="color" list="colors" class="personalization__color" value="#0597F2">
@@ -101,12 +103,17 @@
           <option value="#EAF205"></option>
           <option value="#F24607"></option>
           <option value="#D91111"></option>
+          <option value="#C9C9C9"></option>
+          <option value="#594302"></option>
+          <option value="#ED6897"></option>
+          <option value="#232625"></option>
         </datalist>
       </fieldset>
       <button type="submit" class="button__save">Salvar projeto</button>
     </form>
   </main>
   <script src="./main.js"></script>
+  <script src="./assets/scripts/change-border.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
   <script src="./assets/scripts/highlight.js"></script>
 </body>
