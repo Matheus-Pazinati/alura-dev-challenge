@@ -1,3 +1,4 @@
+/* ============ EDITOR DE CÓDIGO ===== */
 .code__editor {
   display: flex;
   align-items: center;
@@ -6,6 +7,7 @@
 }
 .editor__container {
   margin-bottom: 4rem;
+  cursor: pointer;
 }
 .editor__container:hover {
   margin-bottom: 0;
@@ -23,7 +25,7 @@
   background: rgba(0, 0, 0, 0.16);
   padding: 1.5rem;
   color: #FEFEFE;
-  border-radius: 0.5rem;
+  border-radius: 0 0 0.5rem 0.5rem;
   margin-top: -1px;
 }
 .project__title {
@@ -74,4 +76,17 @@
 }
 .project__profile:hover, .project__button:hover {
   background: rgba(255, 255, 255, 0.08);
+}
+
+/* ============ RESPONSIVIDADE ===== */
+@media (min-width: 1025px) {
+  .code__editor {
+    gap: 1.5rem;
+  }
+  .editor__container {
+    width: 48.35%;
+  }
+  .editor__content {
+    height: 52.5vh;
+  }
 }
