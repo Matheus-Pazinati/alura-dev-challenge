@@ -75,7 +75,7 @@
         </div>
         <label for="code" class="sr-only">Editor de código</label>
         <div class="code__content">
-          <pre><code id="code" spellcheck="false" contenteditable="true"></code></pre>
+          <pre><code id="code" spellcheck="false" contenteditable="true" data-project-code></code></pre>
         </div>
       </div>
       <button class="button__highlight"></button>
@@ -84,14 +84,14 @@
       <fieldset class="project">
         <h2 class="input__title">Seu projeto</h2>
         <label for="name" class="sr-only">Nome do seu projeto</label>
-        <input type="text" id="name" name="name" placeholder="Nome do seu projeto" class="project__name" required>
+        <input type="text" id="name" name="name" placeholder="Nome do seu projeto" class="project__name" data-project-name required>
         <label for="description" class="sr-only">Descrição do seu projeto</label>
-        <textarea type="text" id="description" name="description" placeholder="Descrição do seu projeto" rows="2" class="project__description" required></textarea>
+        <textarea type="text" id="description" name="description" placeholder="Descrição do seu projeto" rows="2" class="project__description" data-project-description required></textarea>
       </fieldset>
       <fieldset class="personalization">
         <legend class="input__title">Personalização</legend>
         <label for="language" class="sr-only">Seleciona uma linguagem de programação</label>
-        <select name="language" id="language" class="personalization__language">
+        <select name="language" id="language" class="personalization__language" data-project-language>
           <option value="javascript">Javascript</option>
           <option value="python">Python</option>
           <option value="php">PHP</option>
@@ -99,7 +99,7 @@
           <option value="css">CSS</option>     
         </select>
         <label for="color" class="sr-only">Selecione uma cor para seu projeto</label>
-        <input type="color" id="color" name="color" list="colors" class="personalization__color" value="#0597F2">
+        <input type="color" id="color" name="color" list="colors" class="personalization__color" value="#0597F2" data-project-colors>
         <datalist id="colors">
           <option value="#0597F2"></option>
           <option value="#970FF2"></option>
@@ -113,12 +113,13 @@
           <option value="#232625"></option>
         </datalist>
       </fieldset>
-      <button type="submit" class="button__save">Salvar projeto</button>
+      <button type="submit" class="button__save" data-project-button>Salvar projeto</button>
     </form>
   </main>
   <script src="./main.js"></script>
   <script src="./assets/scripts/change-border.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
   <script src="./assets/scripts/highlight.js"></script>
+  <script src="./assets/scripts/set-local-storage.js"></script>
 </body>
 </html>
