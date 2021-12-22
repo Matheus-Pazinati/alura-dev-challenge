@@ -56,7 +56,7 @@ body {
 
 /* ============ CABEÇALHO ===== */
 .header__menu {
-  padding: 1.75rem 0 3.125rem;
+  padding: 1.75rem 0 2.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -104,15 +104,7 @@ body {
 }
 
 /* ============ EDITOR DE CÓDIGO ===== */
-.code__editor {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-  overflow: hidden;
-}
 .editor__container {
-  height: 60vh;
   width: 100%;
 }
 .editor__icons {
@@ -219,11 +211,19 @@ body {
   margin: 1.5rem 0 2.25rem 0;
 }
 .menu__profile {
-  display: inline-block;
+  display: flex;
+}
+.profile__link {
+  display: flex;
   align-items: center;
   gap: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
 }
-.menu__profile img {
+.profile__link:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+.profile__link img {
   width: 2rem;
   height: 2rem;
   clip-path: circle();
@@ -276,10 +276,8 @@ body {
   body {
     display: grid;
     grid-template-columns: 1fr 2.3fr 1fr;
-    grid-template-rows: 1fr 5fr;
   }
   header {
-    grid-row: 1/1;
     grid-column: 1/4;
   }
   .divider, .header__icons {

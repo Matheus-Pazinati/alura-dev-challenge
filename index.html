@@ -38,8 +38,10 @@
         </div>
       </section>
       <div class="menu__profile">
-        <img src="./assets/images/marcos-jeeves.jpg" alt="Foto do usuário Marcos">
-        <span>Marcos Jeeves</span>
+        <a href="#" class="profile__link">
+          <img src="./assets/images/marcos-jeeves.jpg" alt="Foto do usuário Marcos">
+          <span>Marcos Jeeves</span>
+       </a>
       </div>
     </div>
     <nav class="side__menu">
@@ -56,8 +58,10 @@
       </div>
       <div class="divider"></div>
       <div class="menu__profile">
-        <img src="./assets/images/marcos-jeeves.jpg" alt="Foto do usuário Marcos">
-        <span>Marcos Jeeves</span>
+        <a href="" class="profile__link">
+          <img src="./assets/images/marcos-jeeves.jpg" alt="Foto do usuário Marcos">
+          <span>Marcos Jeeves</span>
+        </a>
       </div>
     </nav>
   </header>
@@ -80,9 +84,9 @@
       <fieldset class="project">
         <h2 class="input__title">Seu projeto</h2>
         <label for="name" class="sr-only">Nome do seu projeto</label>
-        <input type="text" id="name" name="name" placeholder="Nome do seu projeto" class="project__name">
+        <input type="text" id="name" name="name" placeholder="Nome do seu projeto" class="project__name" required>
         <label for="description" class="sr-only">Descrição do seu projeto</label>
-        <textarea type="text" id="description" name="description" placeholder="Descrição do seu projeto" rows="2" class="project__description"></textarea>
+        <textarea type="text" id="description" name="description" placeholder="Descrição do seu projeto" rows="2" class="project__description" required></textarea>
       </fieldset>
       <fieldset class="personalization">
         <legend class="input__title">Personalização</legend>

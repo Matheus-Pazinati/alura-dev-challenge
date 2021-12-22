@@ -1,0 +1,77 @@
+.code__editor {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.editor__container {
+  margin-bottom: 4rem;
+}
+.editor__container:hover {
+  margin-bottom: 0;
+}
+.editor__content {
+  height: 60vh;
+  border-width: 1.5rem;
+  border-style: solid;
+  border-radius: 0.5rem;
+  background-color: #000;
+  overflow-y: auto;
+  border-color: blue;
+}
+.project__data {
+  background: rgba(0, 0, 0, 0.16);
+  padding: 1.5rem;
+  color: #FEFEFE;
+  border-radius: 0.5rem;
+  margin-top: -1px;
+}
+.project__title {
+  font: var(--font-title);
+  padding-bottom: 0.5rem;
+}
+.project__description {
+  font: var(--font-body);
+}
+.project__status {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+.editor__container:hover .project__status {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.5rem;
+}
+.project__status-button {
+  display: flex;
+}
+.project__button {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  gap: 0.5rem;
+  color: #FEFEFE;
+  border-radius: 1rem;
+}
+.project__profile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #FEFEFE;
+  font: var(--font-body);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+.project__profile img {
+  width: 1.5rem;
+  height: 1.5rem;
+  clip-path: circle();
+  object-fit: cover;
+}
+.project__profile:hover, .project__button:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
