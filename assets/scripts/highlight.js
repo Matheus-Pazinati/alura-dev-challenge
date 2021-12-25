@@ -7,7 +7,7 @@ const CodeEditor = {
   buttonHighlight,
   selectedLanguage,
   highlight(){
-    const projectCode = codeContainer.innerText 
+    const projectCode = codeContainer.innerText;
     codeContainer.innerHTML = `<code id="code" spellcheck="false" contenteditable="true" class="hljs ${selectedLanguage.value}"></code>`
     codeContainer.querySelector('#code').textContent = projectCode
     hljs.highlightElement(codeContainer.querySelector('#code'))

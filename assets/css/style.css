@@ -144,8 +144,8 @@ body {
   color: var(--color-white);
   font: var(--font-code);
   padding: 0 1rem 1rem;
-  white-space: pre-wrap;
   display: block;
+  white-space: pre-wrap;
 }
 .editor__container code:focus-visible {
   outline: none;
