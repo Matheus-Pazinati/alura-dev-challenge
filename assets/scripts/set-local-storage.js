@@ -40,7 +40,7 @@ function verifyEmptyCodeField() {
 
 function clearProjectFields() {
   projectCode.textContent = "";
-  codeText.innerText = "";
+  codeText.innerHTML = `<pre><code id="code" spellcheck="false" contenteditable="true"></code></pre>`
   codeText.classList.remove('code__content--disabled');
   document.querySelector('.button__highlight').classList.remove('button__highlight--remove');
   projectName.value = "";
