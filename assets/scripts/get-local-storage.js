@@ -12,7 +12,7 @@ projectsList.forEach((project, index) => {
   </div>
   <label for="code" class="sr-only">Editor de código</label>
   <div class="code__content">
-    <pre><code id="code" spellcheck="false" contenteditable="false" class="hljs ${project.language}"></code></pre>
+    <pre><code id="code" spellcheck="false" contenteditable="false"></code></pre>
   </div>
 </div>
 <div class="project__data">
@@ -36,11 +36,8 @@ projectsList.forEach((project, index) => {
   </div>
 </div>`;
 projectsContainer.appendChild(projectItem);
-const projectCodeContent = projectsContainer.querySelectorAll('#code');
-projectCodeContent[index].textContent = project.code;
-if (project.highlight) {
-  hljs.highlightElement(projectCodeContent[index])
-}
+const projectCodeContent = projectsContainer.querySelectorAll('.code__content');
+projectCodeContent[index].innerHTML = project.code;
 const projectCodeBorder = document.querySelectorAll('.editor__content');
 projectCodeBorder[index].style.borderColor = project.color;
 })

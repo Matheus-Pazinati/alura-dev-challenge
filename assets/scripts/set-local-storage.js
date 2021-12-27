@@ -1,4 +1,3 @@
-const projectCode = document.querySelector('[data-project-code]')
 const projectName = document.querySelector('[data-project-name]')
 const projectDescription = document.querySelector('[data-project-description]')
 const projectBorderColor = document.querySelector('[data-project-colors]')
@@ -9,12 +8,10 @@ const codeText = document.querySelector('.code__content')
 
 function saveOnLocalStorage() {
   const projectData = {
-    code: projectCode.innerText,
+    code: codeText.innerHTML,
     name: projectName.value,
     description: projectDescription.value,
     color: projectBorderColor.value,
-    language: projectLanguage.value,
-    highlight: document.querySelector('#code').classList.contains('hljs'),
   }
   const projectsList = JSON.parse(localStorage.getItem("projects")|| '[]');
   projectsList.push(projectData);
@@ -39,7 +36,6 @@ function verifyEmptyCodeField() {
 }
 
 function clearProjectFields() {
-  projectCode.textContent = "";
   codeText.innerHTML = `<pre><code id="code" spellcheck="false" contenteditable="true"></code></pre>`
   codeText.classList.remove('code__content--disabled');
   document.querySelector('.button__highlight').classList.remove('button__highlight--remove');

@@ -140,7 +140,6 @@ body {
 .editor__container code {
   height: 100%;
   width: 100%;
-  background: transparent;
   color: var(--color-white);
   font: var(--font-code);
   padding: 0 1rem 1rem;
