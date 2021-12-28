@@ -85,6 +85,7 @@
     width: 48.35%;
   }
   .editor__content {
-    height: 52.5vh;
+    height: 300px;
+    max-height: 300px;
   }
 }

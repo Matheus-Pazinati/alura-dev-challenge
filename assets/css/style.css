@@ -135,6 +135,7 @@ body {
   pointer-events: none;
 }
 .editor__container pre {
+  height: 100%;
   white-space: pre-wrap;
 }
 .editor__container code {
@@ -306,7 +307,7 @@ body {
   .side__menu {
     left: 2rem;
     background-color: transparent;
-    padding: 2rem 0;
+    padding: 1.5rem 0;
   }
   .header__menu .menu__profile {
     display: flex;
