@@ -20,14 +20,14 @@ projectsList.forEach((project, index) => {
   <p class="project__description">${project.description}</p>
   <div class="project__status">
     <div class="project__status-button">
-      <a href="" class="project__button">
-        <img src="./assets/images/icon-comment.svg" alt="Ícone balão de comentário">
+      <button class="project__button">
+        <i class="icon-comment"></i>
         0
-      </a>
-      <a href="" class="project__button">
-        <img src="./assets/images/icon-like.svg" alt="Ícone coração de like">
+      </button>
+      <button class="project__button">
+        <i class="icon-heart"></i>
         0
-      </a>
+      </button>
     </div>
     <a href="" class="project__profile">
       <img src="./assets/images/marcos-jeeves.jpg" alt="Foto do usuário Marcos">

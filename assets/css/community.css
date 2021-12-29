@@ -60,6 +60,7 @@
   gap: 0.5rem;
   color: #FEFEFE;
   border-radius: 1rem;
+  background: transparent;
 }
 .project__profile {
   display: flex;
@@ -78,6 +79,10 @@
 }
 .project__profile:hover, .project__button:hover {
   background: rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+}
+.icon-comment, .icon-heart {
+  font-size: 1.5rem;
 }
 
 /* ============ RESPONSIVIDADE ===== */
