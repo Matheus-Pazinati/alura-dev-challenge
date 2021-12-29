@@ -4,7 +4,7 @@ const projectsContainer = document.querySelector('[data-project-container]')
 projectsList.forEach((project, index) => {
   const projectItem = document.createElement('li');
   projectItem.classList.add('editor__container')
-  projectItem.innerHTML = ` <div class="editor__content">
+  projectItem.innerHTML = ` <div class="editor__content editor__content-disabled">
   <div class="editor__icons">
     <div class="editor__icon icon-red"></div>
     <div class="editor__icon icon-yellow"></div>
