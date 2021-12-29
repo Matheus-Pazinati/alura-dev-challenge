@@ -12,7 +12,8 @@
   border-radius: 0.5rem;
   background-color: #000;
   overflow-y: auto;
-  height: 55.5vh;
+  height: 65vh;
+  max-height: 494px;
 }
 .button__highlight, .button__highlight--remove {
   width: 100%;
@@ -134,6 +135,9 @@ input[type="color"]::-webkit-color-swatch {
 
 /* ============ RESPONSIVIDADE ===== */
 @media (min-width: 600px) {
+  .editor__container {
+    max-height: 366px;
+  }
   .personalization {
     display: flex;
     align-items: center;
@@ -150,6 +154,9 @@ input[type="color"]::-webkit-color-swatch {
   .code__editor {
     grid-column: 1/1;
     grid-row: 1/1;
+  }
+  .editor__container {
+    max-height: 366px;
   }
   main form {
     grid-column: 2/2;
