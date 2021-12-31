@@ -24,7 +24,7 @@ projectsList.forEach((project, index) => {
         <i class="icon-comment"></i>
         0
       </button>
-      <button  data-like-button class="project__button">
+      <button data-like-button class="project__button">
         <i class="icon-heart"></i>
         <span>0</span>
       </button>

@@ -1,17 +1,18 @@
-const likeButtons = document.querySelectorAll('.icon-heart')
+const likeButtons = document.querySelectorAll('[data-like-button]')
+
 likeButtons.forEach((likeButton) => {
   let projectLiked = false;
-  likeButton.addEventListener('click', (event) => {
-    let likeButton = event.target;
-    let likeNumber = Number(likeButton.parentElement.innerText);
-    let likeCount = likeButton.parentElement.children[1];
+
+  likeButton.addEventListener('click', () => {
+    let likeNumber = Number(likeButton.innerText);
+    let likeCount = likeButton.querySelector('span');
     if (projectLiked) {
       likeCount.textContent = likeNumber-= 1;
-      likeButton.style.color = "#FEFEFE";
+      likeButton.children[0].style.color = "#FEFEFE";
       projectLiked = false;
     }else {
       likeCount.textContent = likeNumber+= 1;
-      likeButton.style.color = "#F65151";
+      likeButton.children[0].style.color = "#F65151";
       projectLiked = true;
     }
   })
