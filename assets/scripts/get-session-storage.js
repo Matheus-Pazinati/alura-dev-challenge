@@ -1,4 +1,4 @@
-const projectsList = JSON.parse(localStorage.getItem("projects")|| '[]');
+const projectsList = JSON.parse(sessionStorage.getItem("projects")|| '[]');
 const projectsContainer = document.querySelector('[data-project-container]')
 
 projectsList.forEach((project, index) => {
@@ -29,7 +29,7 @@ projectsList.forEach((project, index) => {
         <span>0</span>
       </button>
     </div>
-    <a href="" class="project__profile">
+    <a class="profile__link">
       <img src="./assets/images/marcos-jeeves.jpg" alt="Foto do usuário Marcos">
       <span>Marcos Jeeves</span>
     </a>

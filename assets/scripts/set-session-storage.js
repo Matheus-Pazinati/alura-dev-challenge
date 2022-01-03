@@ -13,9 +13,9 @@ function saveOnLocalStorage() {
     description: projectDescription.value,
     color: projectBorderColor.value,
   }
-  const projectsList = JSON.parse(localStorage.getItem("projects")|| '[]');
+  const projectsList = JSON.parse(sessionStorage.getItem("projects")|| '[]');
   projectsList.push(projectData);
-  localStorage.setItem("projects", JSON.stringify(projectsList)|| '[]');
+  sessionStorage.setItem("projects", JSON.stringify(projectsList)|| '[]');
 }
 
 projectForm.addEventListener('submit', (event) => {

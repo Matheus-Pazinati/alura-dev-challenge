@@ -62,7 +62,7 @@
   border-radius: 1rem;
   background: transparent;
 }
-.project__profile {
+.profile__link {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -71,7 +71,7 @@
   padding: 0.5rem;
   border-radius: 0.5rem;
 }
-.project__profile img {
+.profile__link img {
   width: 1.5rem;
   height: 1.5rem;
   clip-path: circle();

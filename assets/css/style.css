@@ -213,17 +213,17 @@ body {
 .menu__profile {
   display: flex;
 }
-.profile__link {
+.menu__profile .profile__link {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem;
   border-radius: 0.5rem;
 }
-.profile__link:hover {
+.menu__profile .profile__link:hover {
   background: rgba(255, 255, 255, 0.08);
 }
-.profile__link img {
+.menu__profile .profile__link img {
   width: 2rem;
   height: 2rem;
   clip-path: circle();
