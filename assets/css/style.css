@@ -219,6 +219,7 @@ body {
   gap: 0.5rem;
   padding: 0.75rem;
   border-radius: 0.5rem;
+  cursor: pointer;
 }
 .menu__profile .profile__link:hover {
   background: rgba(255, 255, 255, 0.08);
@@ -226,8 +227,10 @@ body {
 .menu__profile .profile__link img {
   width: 2rem;
   height: 2rem;
-  clip-path: circle();
   object-fit: cover;
+}
+.profile__user {
+  clip-path: circle();
 }
 
 /* ============ CAMPO BUSCA ===== */

@@ -21,13 +21,14 @@ function saveOnLocalStorage() {
 projectForm.addEventListener('submit', (event) => {
   event.preventDefault();
   verifyEmptyCodeField();
+  verifyLogin();
   saveOnLocalStorage();
   clearProjectFields();
 })
 function verifyEmptyCodeField() {
   if (codeText.innerText == ""){
     Swal.fire(
-      'Ops, algo deu errado',
+      'Ops, está faltando alguma coisa',
       'O campo de código está vazio!',
       'error'
     )
@@ -44,4 +45,16 @@ function clearProjectFields() {
   projectLanguage.selectedIndex = 0;
   projectBorderColor.value = "#0597F2"
   editorBorder.style.borderColor = "#0597F2";
+}
+
+function verifyLogin () {
+  const userLogged = JSON.parse(sessionStorage.getItem("user"));
+  if (userLogged == null) {
+    Swal.fire(
+      'Ops, está faltando alguma coisa',
+      'Você ainda não fez login na plataforma',
+      'error'
+    )
+    throw new Error('Falta fazer login')
+  }
 }

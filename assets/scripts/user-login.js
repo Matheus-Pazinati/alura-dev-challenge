@@ -1,5 +1,6 @@
 const body = document.querySelector('body')
 const buttonModal = document.querySelector('[data-modal-button]')
+const inputModal = document.querySelector('[data-modal-input]')
 const Modal = {
   open(){
     body.classList.add('modal__open')
@@ -10,6 +11,7 @@ const Modal = {
 }
 buttonModal.addEventListener('click', () => {
   projectUser();
+  inputModal.value = "";
 })
 function projectUser() {
   const usernameGithub = document.querySelector('[data-modal-input]').value

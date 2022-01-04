@@ -56,20 +56,14 @@ body.modal__open .login__modal {
   margin: 1rem 0 1.5rem;
   text-align: center;
 }
-.modal__form {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-}
-.modal__content label {
-  font-size: 0.85rem;
-}
 .modal__input {
   padding: 0.75rem;
   width: 80%;
   max-width: 500px;
   border-radius: 0.5rem;
   font-size: 1.10rem;
+  display: block;
+  margin: 0 auto;
 }
 .modal__button {
   background-color: #1C1C1C;
