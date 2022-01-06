@@ -20,8 +20,8 @@ function saveOnLocalStorage() {
 
 projectForm.addEventListener('submit', (event) => {
   event.preventDefault();
-  verifyEmptyCodeField();
   verifyLogin();
+  verifyEmptyCodeField();
   saveOnLocalStorage();
   clearProjectFields();
 })
