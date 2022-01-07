@@ -83,11 +83,21 @@
   <main>
     <section class="code__editor">
       <div class="editor__container">
-        <div class="editor__icons">
-          <div class="editor__icon icon-red"></div>
-          <div class="editor__icon icon-yellow"></div>
-          <div class="editor__icon icon-green"></div>
-        </div>
+        <section class="editor__header">
+          <div class="editor__icons">
+            <div class="editor__icon icon-red"></div>
+            <div class="editor__icon icon-yellow"></div>
+            <div class="editor__icon icon-green"></div>
+          </div>
+          <div class="editor__export">
+            <select name="extension" id="extension" class="export__extensions" data-export-select>
+              <option value="png" class="export__extension">PNG</option>
+              <option value="jpeg" class="export__extension">JPEG</option>
+              <option value="svg" class="export__extension">SVG</option>
+            </select>
+            <button disabled class="export__button" data-export-button>Exportar código</button>
+          </div>
+        </section>
         <label for="code" class="sr-only">Editor de código</label>
         <div class="code__content">
           <pre><code id="code" spellcheck="false" contenteditable="true" data-project-code></code></pre>
@@ -135,10 +145,13 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   <script src="./assets/scripts/change-border.js"></script>
   <script src="./assets/scripts/set-session-storage.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
   <script src="./assets/scripts/highlight.js"></script>
   <script src="./assets/scripts/user-login.js"></script>
   <script src="./assets/scripts/show-profile.js"></script>
   <script src="./assets/scripts/login-control.js"></script>
+  <script src="./assets/scripts/export-code.js"></script>
 </body>
 </html>

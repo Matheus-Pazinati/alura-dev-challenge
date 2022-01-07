@@ -45,6 +45,7 @@ function clearProjectFields() {
   projectLanguage.selectedIndex = 0;
   projectBorderColor.value = "#0597F2"
   editorBorder.style.borderColor = "#0597F2";
+  document.querySelector('[data-export-button]').disabled = true;
 }
 
 function verifyLogin () {

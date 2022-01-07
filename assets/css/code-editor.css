@@ -97,6 +97,43 @@ body.modal__open .login__modal {
   height: 65vh;
   max-height: 494px;
 }
+.editor__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.editor__export {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+.export__extensions {
+  background-color: rgba(255, 255, 255, 0.36);
+  color: #FEFEFE;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.export__extensions:focus-visible {
+  outline: none;
+}
+.export__extension {
+  background-color: #777777;
+}
+.export__button {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #5081FB;
+  color: #EDEDED;
+  font-size: 0.9rem;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+}
+.export__button:disabled {
+  background-color: #777777;
+  opacity: 0.5;
+  pointer-events: none;
+}
 .button__highlight, .button__highlight--remove {
   width: 100%;
   text-align: center;

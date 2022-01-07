@@ -37,14 +37,14 @@ function changeHighlightButton() {
 
 function removeHighlight() {
   const userText = CodeEditor.codeContainer.innerText
-  if (code.classList.contains("hljs")){
+  if (document.querySelector('#code').classList.contains("hljs")){
     CodeEditor.codeContainer.innerHTML = `<code id="code" spellcheck="false" contenteditable="true"></code>`
-    code.textContent = userText
+    document.querySelector('#code').textContent = userText
   }
 }
 
 CodeEditor.buttonHighlight.addEventListener('click', () => {
-  removeHighlight()
+  removeHighlight();
   changeHighlightButton();
   applyHighlight();
   disableCodeContainer();
