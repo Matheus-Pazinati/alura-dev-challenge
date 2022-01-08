@@ -106,6 +106,7 @@ body.modal__open .login__modal {
   display: flex;
   gap: 1.5rem;
   padding: 0 1rem;
+  align-items: center;
 }
 .export__extensions {
   background-color: rgba(255, 255, 255, 0.36);
@@ -113,6 +114,7 @@ body.modal__open .login__modal {
   padding: 0.25rem;
   border-radius: 0.5rem;
   cursor: pointer;
+  font-size: 0.8rem;
 }
 .export__extensions:focus-visible {
   outline: none;
@@ -121,11 +123,11 @@ body.modal__open .login__modal {
   background-color: #777777;
 }
 .export__button {
-  padding: 0.5rem;
+  padding: 0.25rem 0.5rem;
   border-radius: 0.5rem;
   background-color: #5081FB;
   color: #EDEDED;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-family: 'Inter', sans-serif;
   cursor: pointer;
 }
@@ -261,6 +263,14 @@ input[type="color"]::-webkit-color-swatch {
     display: flex;
     align-items: center;
     gap: 1rem;
+  }
+  .export__button {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+  .export__extensions {
+    font-size: 0.9rem;
+    padding: 0.35rem;
   }
 }
 @media (min-width: 1025px) {

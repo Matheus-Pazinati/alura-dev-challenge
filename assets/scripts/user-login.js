@@ -7,11 +7,11 @@ const Modal = {
   },
   close(){
     body.classList.remove('modal__open')
+    inputModal.value = "";
   }
 }
 buttonModal.addEventListener('click', () => {
   projectUser();
-  inputModal.value = "";
 })
 function projectUser() {
   const usernameGithub = document.querySelector('[data-modal-input]').value
