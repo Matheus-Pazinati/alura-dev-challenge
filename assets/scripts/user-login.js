@@ -33,7 +33,7 @@ function projectUser() {
           link: data.html_url,
           username: data.name,
       }
-      sessionStorage.setItem("user", JSON.stringify(userData));
+      localStorage.setItem("user", JSON.stringify(userData));
       location.reload()
   })
   Modal.close()

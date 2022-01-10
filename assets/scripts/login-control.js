@@ -1,4 +1,4 @@
-const userExists = JSON.parse(sessionStorage.getItem("user"))
+const userExists = JSON.parse(localStorage.getItem("user"))
 let userLinks = document.querySelectorAll('.profile__link')
 if (userExists != null) {
     userLinks.forEach((link) => {

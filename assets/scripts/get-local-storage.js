@@ -1,4 +1,4 @@
-const projectsList = JSON.parse(sessionStorage.getItem("projects")|| '[]');
+const projectsList = JSON.parse(localStorage.getItem("projects")|| '[]');
 const projectsContainer = document.querySelector('[data-project-container]')
 
 projectsList.forEach((project, index) => {

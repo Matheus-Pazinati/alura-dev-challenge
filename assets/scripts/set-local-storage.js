@@ -13,9 +13,9 @@ function saveOnLocalStorage() {
     description: projectDescription.value,
     color: projectBorderColor.value,
   }
-  const projectsList = JSON.parse(sessionStorage.getItem("projects")|| '[]');
+  const projectsList = JSON.parse(localStorage.getItem("projects")|| '[]');
   projectsList.push(projectData);
-  sessionStorage.setItem("projects", JSON.stringify(projectsList)|| '[]');
+  localStorage.setItem("projects", JSON.stringify(projectsList)|| '[]');
 }
 
 projectForm.addEventListener('submit', (event) => {
@@ -49,7 +49,7 @@ function clearProjectFields() {
 }
 
 function verifyLogin () {
-  const userLogged = JSON.parse(sessionStorage.getItem("user"));
+  const userLogged = JSON.parse(localStorage.getItem("user"));
   if (userLogged == null) {
     Swal.fire(
       'Ops, está faltando alguma coisa',
