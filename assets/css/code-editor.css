@@ -105,7 +105,7 @@ body.modal__open .login__modal {
 .editor__export {
   display: flex;
   gap: 1.5rem;
-  padding: 0 1rem;
+  padding: 0 0.85rem;
   align-items: center;
 }
 .export__extensions {
