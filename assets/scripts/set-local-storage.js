@@ -23,6 +23,7 @@ projectForm.addEventListener('submit', (event) => {
   verifyLogin();
   verifyEmptyCodeField();
   saveOnLocalStorage();
+  showSuccessMessage();
   clearProjectFields();
 })
 function verifyEmptyCodeField() {
@@ -34,6 +35,14 @@ function verifyEmptyCodeField() {
     )
     throw new Error('O campo de código está vazio')
   }
+}
+
+function showSuccessMessage() {
+  Swal.fire(
+    'Projeto salvo com sucesso!',
+    'Você pode visualizá-lo na página da Comunidade',
+    'success'
+  )
 }
 
 function clearProjectFields() {
