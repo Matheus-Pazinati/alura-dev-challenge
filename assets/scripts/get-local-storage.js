@@ -30,8 +30,8 @@ projectsList.forEach((project, index) => {
       </button>
     </div>
     <a class="profile__link">
-      <img src="./assets/images/marcos-jeeves.jpg" alt="Foto do usuário Marcos">
-      <span>Marcos Jeeves</span>
+      <img>
+      <span></span>
     </a>
   </div>
 </div>`;
