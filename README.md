@@ -2,10 +2,11 @@
   <img align="center" src="./assets/images/logo.svg" width="40%">
 </h1>
 <p align="center">
-  <img align="center" src="https://media.giphy.com/media/2OqXrbpluf745NlX2r/giphy.gif" width="50%">
+  <img align="center" src="https://media.giphy.com/media/2OqXrbpluf745NlX2r/giphy.gif" width="55%">
 </p>
 <h2>👨‍💻 Sobre</h2>
-<p>Projeto desenvolvido durante o Alura Challenge Front End, realizado pela Alura exclusivo para seus alunos, para que eles possam colocar em prática os conceitos aprendidos nos cursos. O AluraDev é um site para escrever pequenos trechos de código, com o objetivo de ajudar desenvolvedores e desenvolvedoras a compartilhar suas soluções com outras pessoas.</p>
+<p>Projeto desenvolvido durante o Alura Challenge Front End, realizado pela Alura exclusivo para seus alunos, para que eles possam colocar em prática os conceitos aprendidos nos cursos. O AluraDev é um site para escrever pequenos trechos de código, com o objetivo de ajudar desenvolvedores e desenvolvedoras a compartilhar suas soluções com outras pessoas. Você pode acessar o site do projeto clicando neste link: <a href="https://matheus-pazinati.github.io/alura-dev-challenge/">Site da AluraDev</a>
+</p>
 <br>
 <h2>🎯 Objetivo</h2>
 <p>Simular a criação de um projeto no dia a dia de uma empresa de tecnologia, utilizando a plataforma Trello para organizar as tarefas a serem executas, trabalhando em conjunto com outras pessoas, perguntando e tirando dúvidas, realizando reuniões semanais na plataforma Zoom para fazer um acompanhamento do projeto, entendendo as dificuldades e planejando os próximos passos. Além disso, este é o primeiro projeto que utilizo o Local Storage para armazenar os dados do usuário da plataforma, e também a utilização de algumas bibliotecas para ajudar no desenvolvimento do mesmo.</p>
