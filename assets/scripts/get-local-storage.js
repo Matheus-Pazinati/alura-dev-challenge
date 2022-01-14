@@ -14,30 +14,30 @@ projectsList.forEach((project, index) => {
   <div class="code__content">
     <pre><code id="code" spellcheck="false" contenteditable="false"></code></pre>
   </div>
-</div>
-<div class="project__data">
-  <h2 class="project__title">${project.name}</h2>
-  <p class="project__description">${project.description}</p>
-  <div class="project__status">
-    <div class="project__status-button">
-      <button class="project__button">
-        <i class="icon-comment"></i>
-        0
-      </button>
-      <button data-like-button class="project__button">
-        <i class="icon-heart"></i>
-        <span>0</span>
-      </button>
-    </div>
-    <a class="profile__link">
-      <img>
-      <span></span>
-    </a>
   </div>
-</div>`;
-projectsContainer.appendChild(projectItem);
-const projectCodeContent = projectsContainer.querySelectorAll('.code__content');
-projectCodeContent[index].innerHTML = project.code;
-const projectCodeBorder = document.querySelectorAll('.editor__content');
-projectCodeBorder[index].style.borderColor = project.color;
+  <div class="project__data">
+    <h2 class="project__title">${project.name}</h2>
+    <p class="project__description">${project.description}</p>
+    <div class="project__status">
+      <div class="project__status-button">
+        <button class="project__button">
+          <i class="icon-comment" aria-label="Comentar"></i>
+          0
+        </button>
+        <button data-like-button class="project__button">
+          <i class="icon-heart" aria-label="Curtir"></i>
+          <span>0</span>
+        </button>
+      </div>
+      <a class="profile__link">
+        <img>
+        <span></span>
+      </a>
+    </div>
+  </div>`;
+  projectsContainer.appendChild(projectItem);
+  const projectCodeContent = projectsContainer.querySelectorAll('.code__content');
+  projectCodeContent[index].innerHTML = project.code;
+  const projectCodeBorder = document.querySelectorAll('.editor__content');
+  projectCodeBorder[index].style.borderColor = project.color;
 })
