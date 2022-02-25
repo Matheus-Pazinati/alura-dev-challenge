@@ -9,10 +9,8 @@
 </p>
 <br>
 <h2>🎯 Objetivo</h2>
-<p>Simular a criação de um projeto no dia a dia de uma empresa de tecnologia, utilizando a plataforma Trello para organizar as tarefas a serem executas, trabalhando em conjunto com outras pessoas, perguntando e tirando dúvidas, realizando reuniões semanais na plataforma Zoom para fazer um acompanhamento do projeto, entendendo as dificuldades e planejando os próximos passos. Além disso, este é o primeiro projeto que utilizo o Local Storage para armazenar os dados do usuário da plataforma, e também a utilização de algumas bibliotecas para ajudar no desenvolvimento do mesmo.</p>
+<p>Simular a criação de um projeto no dia a dia de uma empresa de tecnologia, utilizando a plataforma Trello para organizar as tarefas a serem executas, trabalhando em conjunto com outras pessoas, perguntando e tirando dúvidas, realizando reuniões semanais na plataforma Zoom para fazer um acompanhamento do projeto, entendendo as dificuldades e planejando os próximos passos. Além disso, este é o primeiro projeto que utilizo o Local Storage para armazenar os dados do usuário da plataforma, e também a utilização de algumas bibliotecas para ajudar no desenvolvimento.</p>
 <br>
-<img align="right" src="./assets/.github/badge-comunidade.png" width="30%">
-<img align="right" src="./assets/.github/badge-challenge.png" width="30%">
 <h2>🚀 Tecnologias utilizadas</h2>
 <ul>
   <li>HTML</li>
@@ -30,5 +28,13 @@
 <h2>🏷️ Layout</h2>
 <p>Você pode visualizar o layout do projeto através deste link: <a href="https://www.figma.com/file/Ve4hpTfmMa7yAFneoGtGKD/Projects?node-id=17%3A3367&viewport=86%2C-1148%2C0.3736729025840759">Layout do projeto</a>. É necessário possuir uma conta no <a href="https://figma.com">Figma</a> para acessá-lo.</p>
 <br>
-<br>
+<h2>🎖️ Insígnias</h2>
+  <p>Insíginas recebidas da Alura após o cumprimento de alguns objetivos no evento.
+  <div>
+    <img  src="./assets/.github/badge-comunidade.png" width="30%">
+    <img  src="./assets/.github/badge-challenge.png" width="30%">
+    <img  src="./assets/.github/badge-aluradev.png" width="30%">
+  </div>
+  <br>
+  <br>
 <p align="center">Made by Matheus Pazinati 🛸</p>
