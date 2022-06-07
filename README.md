@@ -2,7 +2,7 @@
   <img align="center" src="./assets/images/logo.svg" width="40%">
 </h1>
 <p align="center">
-  <img align="center" src="https://media.giphy.com/media/2OqXrbpluf745NlX2r/giphy.gif" width="100%">
+  <img align="center" src="https://media.giphy.com/media/2OqXrbpluf745NlX2r/giphy.gif">
 </p>
 <h2>👨‍💻 Sobre</h2>
 <p>Projeto desenvolvido durante o Alura Challenge Front End, realizado pela Alura exclusivo para seus alunos, para que eles possam colocar em prática os conceitos aprendidos nos cursos. O AluraDev é um site para escrever pequenos trechos de código, com o objetivo de ajudar desenvolvedores e desenvolvedoras a compartilhar suas soluções com outras pessoas. Você pode acessar o site do projeto clicando neste link: <a href="https://matheus-pazinati.github.io/alura-dev-challenge/">Site da AluraDev</a>
