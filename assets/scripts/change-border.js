@@ -1,6 +1,8 @@
-changeBorderColor()
-const selectColor = document.querySelector('.personalization__color')
-selectColor.addEventListener('change', changeBorderColor)
+export function handleCodeContainerBorderColor() {
+  changeBorderColor()
+  const selectColor = document.querySelector('.personalization__color')
+  selectColor.addEventListener('change', changeBorderColor)
+}
 
 function changeBorderColor() {
   const editorBorder = document.querySelector('.editor__container')
