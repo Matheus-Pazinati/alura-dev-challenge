@@ -1,39 +1,41 @@
-const exportButton = document.querySelector('[data-export-button]')
-const extensionContainer = document.querySelector('.editor__export');
-const editorContainer = document.querySelector('.editor__container');
-const codeContent = document.querySelector('.code__content');
+const Editor = {
+  exportContainer: document.querySelector('.editor__export'),
+  editorContainer: document.querySelector('.editor__container'),
+  codeContent: document.querySelector('.code__content'),
+  exportButton: document.querySelector('[data-export-button]')
+}
 
-codeContent.addEventListener('keyup', enableButton)
-exportButton.addEventListener('click', exportCode)
+export function exportCodeToImage() {
+  Editor.codeContent.addEventListener('keyup', enableExportButton);
+  Editor.exportButton.addEventListener('click', handleExportFormat);
+}
 
-function enableButton () {
-  if (codeContent.innerText == "") {
-    exportButton.disabled = true;
+function enableExportButton () {
+  if (Editor.codeContent.innerText == "") {
+    Editor.exportButton.disabled = true;
   }else {
-    exportButton.disabled = false;
+    Editor.exportButton.disabled = false;
   }
 }
 
-function exportCode() {
+function handleExportFormat() {
   const chosenExtension = document.querySelector('[data-export-select]').value;
   let projectName = document.querySelector('[data-project-name]').value;
 
   if (projectName == "") {
     projectName = "meu-projeto";
   }
-  extensionContainer.style.display = "none"
-  editorContainer.style.maxHeight = "none";
-  editorContainer.style.height = "auto";
-  codeContent.style.height = "auto";
+
+  changeEditorAttributesForDownload()
 
   if (chosenExtension == "png") {
-    domtoimage.toBlob(editorContainer)
+    domtoimage.toBlob(Editor.editorContainer)
     .then(function (blob) {
       window.saveAs(blob, `${projectName}.png`);
       standartEditor();
     });
   } else if (chosenExtension == "jpeg"){
-    domtoimage.toJpeg(editorContainer, { quality: 1 })
+    domtoimage.toJpeg(Editor.editorContainer, { quality: 1 })
     .then(function (dataUrl) {
     var link = document.createElement("a");
     link.download = `${projectName}.jpeg`;
@@ -45,7 +47,7 @@ function exportCode() {
       function filter(node) {
         return node.tagName !== "i";
       }
-      domtoimage.toSvg(editorContainer, { filter: filter })
+      domtoimage.toSvg(Editor.editorContainer, { filter: filter })
       .then(function (dataUrl) {
         var link = document.createElement("a");
         link.download = `${projectName}.svg`;
@@ -57,8 +59,15 @@ function exportCode() {
 }
 
 function standartEditor() {
-  extensionContainer.style.display = "flex";
-  editorContainer.style.maxHeight = "366px"
-  editorContainer.style.height = "65vh"
-  codeContent.style.height = "calc(100% - 52px)"
+  Editor.exportContainer.style.display = "flex";
+  Editor.editorContainer.style.maxHeight = "366px"
+  Editor.editorContainer.style.height = "65vh"
+  Editor.codeContent.style.height = "calc(100% - 52px)"
+}
+
+function changeEditorAttributesForDownload() {
+  Editor.exportContainer.style.display = "none"
+  Editor.editorContainer.style.maxHeight = "none";
+  Editor.editorContainer.style.height = "auto";
+  Editor.codeContent.style.height = "auto";
 }
