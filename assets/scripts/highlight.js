@@ -1,16 +1,12 @@
-const codeContainer = document.querySelector('.code__content')
-const buttonHighlight = document.querySelector('.button__highlight')
-const selectedLanguage = document.querySelector('.personalization__language')
-
 const CodeEditor = {
-  codeContainer,
-  buttonHighlight,
-  selectedLanguage,
+  codeContainer: document.querySelector('.code__content'),
+  buttonHighlight: document.querySelector('.button__highlight'),
+  selectedLanguage: document.querySelector('.personalization__language'),
   highlight(){
-    const projectCode = codeContainer.innerText;
-    codeContainer.innerHTML = `<code id="code" spellcheck="false" contenteditable="true" class="hljs ${selectedLanguage.value}"></code>`
-    codeContainer.querySelector('#code').textContent = projectCode
-    hljs.highlightElement(codeContainer.querySelector('#code'))
+    const projectCode = CodeEditor.codeContainer.innerText;
+    CodeEditor.codeContainer.innerHTML = `<code id="code" spellcheck="false" contenteditable="true" class="hljs ${CodeEditor.selectedLanguage.value}"></code>`
+    CodeEditor.codeContainer.querySelector('#code').textContent = projectCode
+    hljs.highlightElement(CodeEditor.codeContainer.querySelector('#code'))
   },
 }
 
@@ -43,13 +39,15 @@ function removeHighlight() {
   }
 }
 
-CodeEditor.buttonHighlight.addEventListener('click', () => {
-  removeHighlight();
-  changeHighlightButton();
-  applyHighlight();
-  disableCodeContainer();
-})
-
-selectedLanguage.addEventListener('change', () => {
-  changeHighlight()
-})
+export function handleHighlight() {
+  CodeEditor.buttonHighlight.addEventListener('click', () => {
+    removeHighlight();
+    changeHighlightButton();
+    applyHighlight();
+    disableCodeContainer();
+  })
+  
+  CodeEditor.selectedLanguage.addEventListener('change', () => {
+    changeHighlight()
+  })
+}
