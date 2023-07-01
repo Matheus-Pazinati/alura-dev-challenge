@@ -1,53 +1,30 @@
-const CodeEditor = {
-  codeContainer: document.querySelector('.code__content'),
-  buttonHighlight: document.querySelector('.button__highlight'),
-  selectedLanguage: document.querySelector('.personalization__language'),
-  highlight(){
-    const projectCode = CodeEditor.codeContainer.innerText;
-    CodeEditor.codeContainer.innerHTML = `<code id="code" spellcheck="false" contenteditable="true" class="hljs ${CodeEditor.selectedLanguage.value}"></code>`
-    CodeEditor.codeContainer.querySelector('#code').textContent = projectCode
-    hljs.highlightElement(CodeEditor.codeContainer.querySelector('#code'))
-  },
-}
+import { CodeEditor } from './code-editor.js'
 
-function changeHighlight() {
-  if (CodeEditor.codeContainer.classList.contains('code__content--disabled')){
-    CodeEditor.highlight()
+function handleHighlight() {
+  const buttonHighlight = document.querySelector('.button__highlight')
+  const selectedLanguage = document.querySelector('.personalization__language')
+  const isEditorWithHighlight = document.querySelector('#code').classList.contains("hljs")
+
+  if (isEditorWithHighlight) {
+    CodeEditor.removeHighlight()
+    CodeEditor.enableCodeContainer()
+    buttonHighlight.classList.remove('button__highlight--remove')
+  } else {
+    CodeEditor.applyHighlight(selectedLanguage.value)
+    CodeEditor.disableCodeContainer()
+    buttonHighlight.classList.add('button__highlight--remove')
   }
 }
 
-function applyHighlight() {
-  if (CodeEditor.codeContainer.classList.contains('code__content--disabled')){
-    return;
-  }
-  CodeEditor.highlight()
-}
-
-function disableCodeContainer() {
-  CodeEditor.codeContainer.classList.toggle('code__content--disabled')
-}
-
-function changeHighlightButton() {
-  CodeEditor.buttonHighlight.classList.toggle('button__highlight--remove')
-}
-
-function removeHighlight() {
-  const userText = CodeEditor.codeContainer.innerText
-  if (document.querySelector('#code').classList.contains("hljs")){
-    CodeEditor.codeContainer.innerHTML = `<code id="code" spellcheck="false" contenteditable="true"></code>`
-    document.querySelector('#code').textContent = userText
+function changeLanguageHighlight() {
+  const isCodeEditorDisabled = CodeEditor.codeContainer.classList.contains('code__content--disabled')
+  if (isCodeEditorDisabled){
+    CodeEditor.applyHighlight(selectedLanguage.value)
   }
 }
 
-export function handleHighlight() {
-  CodeEditor.buttonHighlight.addEventListener('click', () => {
-    removeHighlight();
-    changeHighlightButton();
-    applyHighlight();
-    disableCodeContainer();
-  })
+const buttonHighlight = document.querySelector('.button__highlight')
+buttonHighlight.addEventListener('click', handleHighlight)
   
-  CodeEditor.selectedLanguage.addEventListener('change', () => {
-    changeHighlight()
-  })
-}
+const selectedLanguage = document.querySelector('.personalization__language')
+selectedLanguage.addEventListener('change', changeLanguageHighlight)

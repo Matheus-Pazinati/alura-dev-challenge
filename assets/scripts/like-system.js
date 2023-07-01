@@ -5,14 +5,13 @@ export function handleProjectLike() {
     let projectLiked = false;
   
     likeButton.addEventListener('click', () => {
-      let likeNumber = Number(likeButton.innerText);
       let likeCount = likeButton.querySelector('span');
       if (projectLiked) {
-        likeCount.textContent = likeNumber-= 1;
+        likeCount.textContent = 0;
         likeButton.children[0].style.color = "#FEFEFE";
         projectLiked = false;
       }else {
-        likeCount.textContent = likeNumber+= 1;
+        likeCount.textContent = 1;
         likeButton.children[0].style.color = "#F65151";
         projectLiked = true;
       }

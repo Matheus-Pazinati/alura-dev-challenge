@@ -91,6 +91,7 @@ body.modal__open .login__modal {
 .editor__container {
   border-width: 2rem;
   border-style: solid;
+  border-color: #0597F2;
   border-radius: 0.5rem;
   background-color: #000;
   overflow-y: auto;
