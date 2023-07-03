@@ -1,9 +1,10 @@
-import { handleMenuIconsOpenClose } from "./assets/scripts/open-close-menu.js";
-import { handleSearchFieldOpenClose } from "./assets/scripts/open-close-search.js";
-import { getProjectDataFromLocalStorage } from './assets/scripts/get-local-storage.js';
-import { handleProjectLike } from "./assets/scripts/like-system.js";
+import { disableMenuLinkHome, openCloseMenu } from "./assets/scripts/open-close-menu.js";
+import { openCloseSearchField } from "./assets/scripts/open-close-search.js";
 
-handleMenuIconsOpenClose();
-handleSearchFieldOpenClose();
-getProjectDataFromLocalStorage();
-handleProjectLike();
+const menuIcons = document.querySelectorAll('.menu__toggle')
+const menuLinkHome = document.querySelector('.menu__item')
+const searchIcons = document.querySelectorAll('.search__toggle')
+
+menuIcons.forEach(openCloseMenu)
+searchIcons.forEach(openCloseSearchField)
+menuLinkHome.addEventListener('click', disableMenuLinkHome)

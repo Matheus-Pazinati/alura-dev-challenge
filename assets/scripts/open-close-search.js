@@ -1,9 +1,4 @@
-export function handleSearchFieldOpenClose() {
-  const searchIcons = document.querySelectorAll('.search__toggle')
-  searchIcons.forEach(openCloseSearchField)
-}
-
-function openCloseSearchField(icon) {
+export function openCloseSearchField(icon) {
   const header = document.querySelector('.header')
   icon.addEventListener('click', () => {
     const menuIsOpen = header.classList.contains('active')

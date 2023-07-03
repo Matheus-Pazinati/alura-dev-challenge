@@ -5,10 +5,8 @@ const Editor = {
   exportButton: document.querySelector('[data-export-button]')
 }
 
-export function exportCodeToImage() {
-  Editor.codeContent.addEventListener('keyup', enableExportButton);
-  Editor.exportButton.addEventListener('click', handleExportFormat);
-}
+Editor.codeContent.addEventListener('keyup', enableExportButton);
+Editor.exportButton.addEventListener('click', handleExportFormat);
 
 function enableExportButton () {
   if (Editor.codeContent.innerText == "") {

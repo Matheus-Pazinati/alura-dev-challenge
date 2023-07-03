@@ -1,17 +1,11 @@
-export function handleMenuIconsOpenClose() {
-  const menuIcons = document.querySelectorAll('.menu__toggle')
-  const menuLinkHome = document.querySelector('.menu__item')
-  const header = document.querySelector('.header')
+const header = document.querySelector('.header')
 
-  menuIcons.forEach(openCloseMenu)
-  menuLinkHome.addEventListener('click', () => {
-    header.classList.remove('active')
-  })
-}
-
-function openCloseMenu(icon) {
-  const header = document.querySelector('.header')
+export function openCloseMenu(icon) {
   icon.addEventListener('click', () => {
     header.classList.toggle('active')
   })
+}
+
+export function disableMenuLinkHome(icon) {
+  header.classList.remove('active')
 }
